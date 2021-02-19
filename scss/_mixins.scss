@@ -1,0 +1,17 @@
+// 768px - 1440px
+$breakpoints-up: ("tablet": "48em", "desktop": "90em");
+
+// 767px - 1439px
+$breakpoints-down: ("tablet": "47.9375em", "desktop": "89.9375em");
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)){
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)){
+    @content;
+  }
+}

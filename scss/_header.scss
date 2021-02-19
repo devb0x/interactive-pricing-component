@@ -1,0 +1,42 @@
+@import "variables";
+@import "mixins";
+
+.header {
+  position: relative;
+  display: flex;
+  height: 50vh;
+  background-image: url("./../images/bg-pattern.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &-wrapper {
+    width: 326px;
+    height: 146px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 89px auto;
+
+    background-image: url("./../images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .header-text {
+      margin: auto;
+
+      &__title {
+        font-size: 20px;
+        font-weight: $extraBold;
+      }
+
+      &__msg {
+        font-size: 13px;
+        color: $grayishBlue;
+      }
+
+    }
+
+  }
+
+}
