@@ -16,11 +16,16 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 89px auto;
+    margin: 57px auto 32px;
 
     background-image: url("./../images/pattern-circles.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @include breakpoint-up(desktop){
+      width: 395px;
+      height: 145px;
+    }
 
     .header-text {
       margin: auto;
@@ -28,11 +33,25 @@
       &__title {
         font-size: 20px;
         font-weight: $extraBold;
+
+        @include breakpoint-up(desktop){
+          font-size: 28px;
+        }
       }
 
       &__msg {
         font-size: 13px;
         color: $grayishBlue;
+
+        @include breakpoint-up(desktop){
+          font-size: 15px;
+        }
+
+        > br {
+          @include breakpoint-up(desktop){
+            display: none;
+          }
+        }
       }
 
     }
