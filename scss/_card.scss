@@ -2,7 +2,6 @@
 @import "mixins";
 
 .card {
-  //border: $b;
   height: 478px;
   width: 327px;
   margin: 34px auto;
@@ -12,21 +11,26 @@
   border-radius: 8px;
   box-shadow: 0 20px 30px -5px rgba(127, 137, 185, 0.152073);
 
+  @include breakpoint-up(desktop){
+    width: 540px;
+    height: 397px;
+  }
 
   &-top {
-    //border: $b;
     height: 278px;
     max-height: 278px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
+
 
     .number {
       margin-top: 30px;
       text-transform: uppercase;
       font-size: 12px;
       font-weight: $extraBold;
+      letter-spacing: 1.71429px;
     }
 
     input {
@@ -34,121 +38,6 @@
       width: 279px;
       height: 8px;
     }
-
-    //.custom-slider {
-    //  -webkit-appearance: none;
-    //  outline: none;
-    //  background: $softCyan;
-    //  border-radius: 5px;
-    //}
-
-    //input[type=range] {
-    //  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    //  width: 100%; /* Specific width is required for Firefox. */
-    //  background: transparent; /* Otherwise white in Chrome */
-    //}
-    //
-    //input[type=range]::-webkit-slider-thumb {
-    //  -webkit-appearance: none;
-    //}
-    //
-    //input[type=range]:focus {
-    //  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-    //}
-    //
-    //input[type=range]::-ms-track {
-    //  width: 278px;
-    //  cursor: pointer;
-    //
-    //  /* Hides the slider so custom styles can be added */
-    //  background: transparent;
-    //  border-color: transparent;
-    //  color: transparent;
-    //}
-    //  step 2
-    //
-    //input[type=range]::-moz-range-thumb {
-    //  box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
-    //  height: 40px;
-    //  width: 40px;
-    //  border: none;
-    //  border-radius: 25px;
-    //  background-color: $strongCyan;
-    //  cursor: pointer;
-    //  background-image: url("./../images/icon-slider.svg");
-    //  background-position: center;
-    //  background-repeat: no-repeat;
-    //}
-    //
-    //input[type=range]::-webkit-slider-thumb {
-    //  box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
-    //  height: 40px;
-    //  width: 40px;
-    //  border: none;
-    //  border-radius: 25px;
-    //  background-color: $strongCyan;
-    //  cursor: pointer;
-    //  background-image: url("./../images/icon-slider.svg");
-    //  background-position: center;
-    //  background-repeat: no-repeat;
-    //}
-    //
-    //input[type=range]::-webkit-slider-runnable-track {
-    //  width: 279px;
-    //  height: 8px;
-    //  cursor: pointer;
-    //  //box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    //  background: $softCyan;
-    //  //border-radius: 1.3px;
-    //  //border: 0.2px solid #010101;
-    //}
-    //
-    //input[type=range]:focus::-webkit-slider-runnable-track {
-    //  background: $softCyan;
-    //  width: 278px;
-    //}
-    //
-    //input[type=range]::-moz-range-track {
-    //  width: 279px;
-    //  height: 8px;
-    //  cursor: pointer;
-    //  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    //  background: #3071a9;
-    //  border-radius: 1.3px;
-    //  border: 0.2px solid #010101;
-    //}
-    //
-    //input[type=range]::-ms-track {
-    //  width: 279px;
-    //  height: 8px;
-    //  cursor: pointer;
-    //  background: transparent;
-    //  border-color: transparent;
-    //  border-width: 16px 0;
-    //  color: transparent;
-    //}
-    //input[type=range]::-ms-fill-lower {
-    //  background: #2a6495;
-    //  border: 0.2px solid #010101;
-    //  border-radius: 2.6px;
-    //  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    //}
-    //input[type=range]:focus::-ms-fill-lower {
-    //  background: #3071a9;
-    //}
-    //input[type=range]::-ms-fill-upper {
-    //  background: #3071a9;
-    //  border: 0.2px solid #010101;
-    //  border-radius: 2.6px;
-    //  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    //}
-    //input[type=range]:focus::-ms-fill-upper {
-    //  background: #367ebd;
-    //}
-
-    // TODO check color input range after the slider
-
-
 
     .price {
       font-size: 32px;
@@ -166,7 +55,6 @@
       font-size: 12px;
       margin-bottom: 38px;
 
-
       .badge {
         position: absolute;
         margin: 0 0 0 4px;
@@ -176,21 +64,54 @@
         color:$lightRed;
         background-color: hsl(15, 90%, 95%);
         border-radius: 9.5px;
-
         height: 19px;
         width: 41px;
       }
     }
   }
 
-
   &-bottom {
-    border-top: 1px solid blue;
+    border-top: 1px solid $lightGrayishBlue;
     height: 200px;
     max-height: 200px;
-  }
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
+    .perks {
+      text-align: center;
+      list-style: inside url("./../images/icon-check.svg");
+      padding: 0;
+      height: 71px;
+      font-size: 12px;
+      line-height: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: auto 0 auto;
+    }
+
+    .btn {
+      cursor: pointer;
+      outline: none;
+      border: none;
+      border-radius: 20.5px;
+      width: 170px;
+      height: 41px;
+      background-color: $darkDesaturatedBlue;
+      color: $paleBlue;
+      margin: 0 auto 32px;
+      font-family: $manrope;
+      font-size: 12px;
+      font-weight: $extraBold;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+} // end .card
 
 
 // Switch button
@@ -216,8 +137,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  //background-color: $lightGrayishBlue;
-  background-color: hsl(223, 50%, 87%);
+  background-color: $lightGrayishBlueBg;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -250,14 +170,13 @@ input:checked + .slider:before {
 
 
 // input range with slider
-
-
-//    Step 1 - reset browser css then we can apply our style
+//    Step #1 - reset browser css then we can apply our style
 
 input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   //width: 279px; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
+  cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -268,7 +187,7 @@ input[type=range]:focus {
   outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
-// Step 2 - Styling the thumb (icon slider)
+// Step #2 - Styling the thumb (icon slider)
 
 // for Webkit - Chrome & Edge
 input[type=range]::-webkit-slider-thumb {
@@ -282,7 +201,6 @@ input[type=range]::-webkit-slider-thumb {
   background-image: url("./../images/icon-slider.svg");
   background-position: center;
   background-repeat: no-repeat;
-
   margin: -16px 0; // alignment fix
 }
 
@@ -294,13 +212,13 @@ input[type=range]::-moz-range-thumb {
   border: none;
   border-radius: 25px;
   background-color: $strongCyan;
-  cursor: pointer;
+  cursor: grabbing;
   background-image: url("./../images/icon-slider.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-// Step 3 - Styling the track
+// Step #3 - Styling the track
 
 // for Webkit - Chrome & Edge
 input[type=range]::-webkit-slider-runnable-track {
@@ -310,10 +228,10 @@ input[type=range]::-webkit-slider-runnable-track {
   background: $softCyan;
   border-radius: 5px;
   border: none;
-}
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: red;
+  @include breakpoint-up(desktop){
+
+  }
 }
 
 // for Firefox
@@ -321,12 +239,26 @@ input[type=range]::-moz-range-track {
   width: 279px;
   height: 8px;
   cursor: pointer;
-  background: $softCyan;
+  background: $lightGrayishBlue;
   border-radius: 5px;
   border: none;
 }
 
-input[type=range]:focus::-moz-range-track {
-  background: red;
+// Step #4 - Tracking progress
+
+// for Webkit - Chrome & Edge
+input[type="range"]progress {
+  -webkit-appearance: none;
 }
 
+input[type="range"]::-webkit-progress-value {
+  background-color: black;
+  color: red;
+  height: 8px;
+}
+
+// for Firefox
+input[type="range"]::-moz-range-progress {
+  background-color: $softCyan;
+  height: 8px;
+}

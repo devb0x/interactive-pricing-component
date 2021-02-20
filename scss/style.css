@@ -77,12 +77,18 @@ body {
   border-radius: 8px;
   box-shadow: 0 20px 30px -5px rgba(127, 137, 185, 0.152073);
 }
+@media (min-width: 90em) {
+  .card {
+    width: 540px;
+    height: 397px;
+  }
+}
 .card-top {
   height: 278px;
   max-height: 278px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
 }
 .card-top .number {
@@ -90,6 +96,7 @@ body {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 800;
+  letter-spacing: 1.71429px;
 }
 .card-top input {
   margin: 0 auto;
@@ -123,9 +130,41 @@ body {
   width: 41px;
 }
 .card-bottom {
-  border-top: 1px solid blue;
+  border-top: 1px solid #eaeefb;
   height: 200px;
   max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.card-bottom .perks {
+  text-align: center;
+  list-style: inside url("./../images/icon-check.svg");
+  padding: 0;
+  height: 71px;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: auto 0 auto;
+}
+.card-bottom .btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 20.5px;
+  width: 170px;
+  height: 41px;
+  background-color: #293356;
+  color: #bdccff;
+  margin: 0 auto 32px;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+.card-bottom .btn:hover {
+  color: white;
 }
 
 .switch {
@@ -186,6 +225,7 @@ input[type=range] {
   /* Hides the slider so that custom slider can be made */
   background: transparent;
   /* Otherwise white in Chrome */
+  cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -218,7 +258,7 @@ input[type=range]::-moz-range-thumb {
   border: none;
   border-radius: 25px;
   background-color: #10d5c2;
-  cursor: pointer;
+  cursor: grabbing;
   background-image: url("./../images/icon-slider.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -232,22 +272,28 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 5px;
   border: none;
 }
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: red;
-}
-
 input[type=range]::-moz-range-track {
   width: 279px;
   height: 8px;
   cursor: pointer;
-  background: #a5f3eb;
+  background: #eaeefb;
   border-radius: 5px;
   border: none;
 }
 
-input[type=range]:focus::-moz-range-track {
-  background: red;
+input[type=range] progress {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-progress-value {
+  background-color: black;
+  color: red;
+  height: 8px;
+}
+
+input[type=range]::-moz-range-progress {
+  background-color: #a5f3eb;
+  height: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
