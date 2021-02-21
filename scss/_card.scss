@@ -11,9 +11,10 @@
   border-radius: 8px;
   box-shadow: 0 20px 30px -5px rgba(127, 137, 185, 0.152073);
 
-  @include breakpoint-up(desktop){
+  @include breakpoint-up(tablet){
     width: 540px;
     height: 397px;
+    margin: -60px auto;
   }
 
   &-top {
@@ -24,6 +25,10 @@
     justify-content: space-between;
     text-align: center;
 
+    @include breakpoint-up(tablet){
+      height: 261px;
+      width: 540px;
+    }
 
     .number {
       margin-top: 30px;
@@ -31,29 +36,72 @@
       font-size: 12px;
       font-weight: $extraBold;
       letter-spacing: 1.71429px;
+
+      @include breakpoint-up(tablet){
+        position: absolute;
+        right: 54.26%;
+        left: 8.89%;
+        top: 13.08%;
+        bottom: 76.07%;
+        margin-top: 0;
+        text-align: left;
+        letter-spacing: 2px;
+      }
     }
 
     input {
       margin: 0 auto;
       width: 279px;
       height: 8px;
+
+      @include breakpoint-up(tablet){
+        width: 444px;
+        position: absolute;
+        left: 8.89%;
+        right: 8.89%;
+        top: 34.01%;
+        bottom: 63.98%;
+      }
     }
 
     .price {
       font-size: 32px;
       font-weight: $extraBold;
+      color: $darkDesaturatedBlue;
+
+      @include breakpoint-up(tablet){
+        position: absolute;
+        left: 54.26%;
+        right: 8.89%;
+        top: 10.08%;
+        bottom: 76.07%;
+        text-align: right;
+        font-size: 40px;
+      }
 
       > span {
         position: relative;
         bottom: 5px;
         font-size: 14px;
         font-weight: $semiBold;
+        color: $grayishBlue;
       }
     }
 
     .billing {
+      display: inline-flex;
       font-size: 12px;
-      margin-bottom: 38px;
+      margin: 0 auto 38px;
+
+      @include breakpoint-up(tablet){
+        margin: 0 auto 38px 30%;
+      }
+
+      &-left, &-right {
+        @include breakpoint-up(tablet){
+          margin-top: 10px;
+        }
+      }
 
       .badge {
         position: absolute;
@@ -66,6 +114,11 @@
         border-radius: 9.5px;
         height: 19px;
         width: 41px;
+
+        @include breakpoint-up(tablet){
+          width: 80px;
+          position: relative;
+        }
       }
     }
   }
@@ -78,6 +131,11 @@
     flex-direction: column;
     justify-content: space-evenly;
 
+    @include breakpoint-up(tablet){
+      height: 136px;
+      flex-direction: inherit;
+    }
+
     .perks {
       text-align: center;
       list-style: inside url("./../images/icon-check.svg");
@@ -89,6 +147,19 @@
       flex-direction: column;
       justify-content: space-evenly;
       margin: auto 0 auto;
+
+      @include breakpoint-up(tablet){
+        list-style: outside url("./../images/icon-check.svg");
+        margin: auto auto auto 58px;
+        text-align: left;
+      }
+
+      &-span {
+        @include breakpoint-up(tablet){
+          margin-left: 9px;
+        }
+      }
+
     }
 
     .btn {
@@ -108,6 +179,10 @@
       &:hover {
         color: $white;
       }
+
+      @include breakpoint-up(tablet){
+        margin: auto 44px auto;
+      }
     }
   }
 
@@ -123,6 +198,10 @@
   height: 24px;
   margin: 0 8px;
   bottom: 4px;
+
+  @include breakpoint-up(tablet){
+    bottom: -7px;
+  }
 }
 .switch input {
   opacity: 0;
@@ -138,8 +217,8 @@
   right: 0;
   bottom: 0;
   background-color: $lightGrayishBlueBg;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .slider:before {
@@ -150,8 +229,8 @@
   left: 5px;
   bottom: 5px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 input:checked + .slider:before {
@@ -229,36 +308,28 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 5px;
   border: none;
 
-  @include breakpoint-up(desktop){
-
-  }
 }
 
 // for Firefox
 input[type=range]::-moz-range-track {
   width: 279px;
+  //width: 444px;
   height: 8px;
   cursor: pointer;
   background: $lightGrayishBlue;
   border-radius: 5px;
   border: none;
+
+  @include breakpoint-up(tablet){
+    width: 444px;
+  }
 }
 
 // Step #4 - Tracking progress
-
-// for Webkit - Chrome & Edge
-input[type="range"]progress {
-  -webkit-appearance: none;
-}
-
-input[type="range"]::-webkit-progress-value {
-  background-color: black;
-  color: red;
-  height: 8px;
-}
 
 // for Firefox
 input[type="range"]::-moz-range-progress {
   background-color: $softCyan;
   height: 8px;
+  border-radius: 5px;
 }

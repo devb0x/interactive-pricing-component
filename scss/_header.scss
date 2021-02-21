@@ -10,6 +10,10 @@
   background-repeat: no-repeat;
   text-align: center;
 
+  @include breakpoint-up(tablet){
+    background-position: left bottom;
+  }
+
   &-wrapper {
     width: 326px;
     height: 146px;

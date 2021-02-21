@@ -14,6 +14,18 @@ body {
   font-weight: 500;
 }
 
+@media (max-width: 47.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 48em) {
+  .hide-for-tablet {
+    display: none;
+  }
+}
+
 .header {
   position: relative;
   display: flex;
@@ -22,6 +34,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+}
+@media (min-width: 48em) {
+  .header {
+    background-position: left bottom;
+  }
 }
 .header-wrapper {
   width: 326px;
@@ -77,10 +94,11 @@ body {
   border-radius: 8px;
   box-shadow: 0 20px 30px -5px rgba(127, 137, 185, 0.152073);
 }
-@media (min-width: 90em) {
+@media (min-width: 48em) {
   .card {
     width: 540px;
     height: 397px;
+    margin: -60px auto;
   }
 }
 .card-top {
@@ -91,6 +109,12 @@ body {
   justify-content: space-between;
   text-align: center;
 }
+@media (min-width: 48em) {
+  .card-top {
+    height: 261px;
+    width: 540px;
+  }
+}
 .card-top .number {
   margin-top: 30px;
   text-transform: uppercase;
@@ -98,24 +122,70 @@ body {
   font-weight: 800;
   letter-spacing: 1.71429px;
 }
+@media (min-width: 48em) {
+  .card-top .number {
+    position: absolute;
+    right: 54.26%;
+    left: 8.89%;
+    top: 13.08%;
+    bottom: 76.07%;
+    margin-top: 0;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+}
 .card-top input {
   margin: 0 auto;
   width: 279px;
   height: 8px;
 }
+@media (min-width: 48em) {
+  .card-top input {
+    width: 444px;
+    position: absolute;
+    left: 8.89%;
+    right: 8.89%;
+    top: 34.01%;
+    bottom: 63.98%;
+  }
+}
 .card-top .price {
   font-size: 32px;
   font-weight: 800;
+  color: #293356;
+}
+@media (min-width: 48em) {
+  .card-top .price {
+    position: absolute;
+    left: 54.26%;
+    right: 8.89%;
+    top: 10.08%;
+    bottom: 76.07%;
+    text-align: right;
+    font-size: 40px;
+  }
 }
 .card-top .price > span {
   position: relative;
   bottom: 5px;
   font-size: 14px;
   font-weight: 500;
+  color: #858fad;
 }
 .card-top .billing {
+  display: inline-flex;
   font-size: 12px;
-  margin-bottom: 38px;
+  margin: 0 auto 38px;
+}
+@media (min-width: 48em) {
+  .card-top .billing {
+    margin: 0 auto 38px 30%;
+  }
+}
+@media (min-width: 48em) {
+  .card-top .billing-left, .card-top .billing-right {
+    margin-top: 10px;
+  }
 }
 .card-top .billing .badge {
   position: absolute;
@@ -129,6 +199,12 @@ body {
   height: 19px;
   width: 41px;
 }
+@media (min-width: 48em) {
+  .card-top .billing .badge {
+    width: 80px;
+    position: relative;
+  }
+}
 .card-bottom {
   border-top: 1px solid #eaeefb;
   height: 200px;
@@ -136,6 +212,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+@media (min-width: 48em) {
+  .card-bottom {
+    height: 136px;
+    flex-direction: inherit;
+  }
 }
 .card-bottom .perks {
   text-align: center;
@@ -148,6 +230,18 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   margin: auto 0 auto;
+}
+@media (min-width: 48em) {
+  .card-bottom .perks {
+    list-style: outside url("./../images/icon-check.svg");
+    margin: auto auto auto 58px;
+    text-align: left;
+  }
+}
+@media (min-width: 48em) {
+  .card-bottom .perks-span {
+    margin-left: 9px;
+  }
 }
 .card-bottom .btn {
   cursor: pointer;
@@ -166,6 +260,11 @@ body {
 .card-bottom .btn:hover {
   color: white;
 }
+@media (min-width: 48em) {
+  .card-bottom .btn {
+    margin: auto 44px auto;
+  }
+}
 
 .switch {
   position: relative;
@@ -174,6 +273,11 @@ body {
   height: 24px;
   margin: 0 8px;
   bottom: 4px;
+}
+@media (min-width: 48em) {
+  .switch {
+    bottom: -7px;
+  }
 }
 
 .switch input {
@@ -190,8 +294,8 @@ body {
   right: 0;
   bottom: 0;
   background-color: #cdd7ee;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .slider:before {
@@ -202,8 +306,8 @@ body {
   left: 5px;
   bottom: 5px;
   background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 input:checked + .slider:before {
@@ -272,6 +376,7 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 5px;
   border: none;
 }
+
 input[type=range]::-moz-range-track {
   width: 279px;
   height: 8px;
@@ -280,20 +385,16 @@ input[type=range]::-moz-range-track {
   border-radius: 5px;
   border: none;
 }
-
-input[type=range] progress {
-  -webkit-appearance: none;
-}
-
-input[type=range]::-webkit-progress-value {
-  background-color: black;
-  color: red;
-  height: 8px;
+@media (min-width: 48em) {
+  input[type=range]::-moz-range-track {
+    width: 444px;
+  }
 }
 
 input[type=range]::-moz-range-progress {
   background-color: #a5f3eb;
   height: 8px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
