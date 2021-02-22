@@ -43,14 +43,15 @@
     <div class="card-top">
 
       <div class="number">
-        100K Pageviews
+        <span class="userChoice"></span> Pageviews
+<!--        100K Pageviews-->
       </div>
 
       <label for="viewNumber"></label>
-      <input class="custom-slider" type="range" id="viewNumber" min="1" max="5" value="3">
+      <input class="custom-slider" type="range" id="viewNumber" min="0" max="4" value="2">
 
       <div class="price">
-        $16.00 <span>/ month</span>
+        $12.00 <span>/ month</span>
       </div>
 
       <div class="billing">
@@ -59,19 +60,18 @@
         </div>
 
         <label class="switch">
-          <input type="checkbox" checked>
+          <input type="checkbox" checked id="test">
           <span class="slider round"></span>
         </label>
 
         <div class="billing-right">
           Yearly Billing
           <span class="badge hide-for-tablet">-25%</span>
-          <span class="badge hide-for-mobile">-25% discount</span>
+          <span class="badge badge-discount hide-for-mobile">-25% discount</span>
         </div>
       </div>
 
-    </div>
-
+    </div> <!-- end .card-top -->
 
     <div class="card-bottom">
 
@@ -93,9 +93,7 @@
 
   </div>
 
-
-
-
+  <script src="./js/script.js"></script>
 
 <!--  -->
 <!--  <div class="attribution">-->

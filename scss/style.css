@@ -205,6 +205,11 @@ body {
     position: relative;
   }
 }
+@media (min-width: 48em) {
+  .card-top .billing .badge-discount {
+    padding: 3px 6px;
+  }
+}
 .card-bottom {
   border-top: 1px solid #eaeefb;
   height: 200px;
@@ -256,6 +261,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 12px;
   font-weight: 800;
+  padding: 0;
 }
 .card-bottom .btn:hover {
   color: white;
@@ -296,6 +302,9 @@ body {
   background-color: #cdd7ee;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+.slider:hover {
+  background-color: #7beadf;
 }
 
 .slider:before {
@@ -354,6 +363,9 @@ input[type=range]::-webkit-slider-thumb {
   background-repeat: no-repeat;
   margin: -16px 0;
 }
+input[type=range]::-webkit-slider-thumb:active {
+  background-color: #25ad9f;
+}
 
 input[type=range]::-moz-range-thumb {
   box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
@@ -366,6 +378,9 @@ input[type=range]::-moz-range-thumb {
   background-image: url("./../images/icon-slider.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+input[type=range]::-moz-range-thumb:active {
+  background-color: #25ad9f;
 }
 
 input[type=range]::-webkit-slider-runnable-track {

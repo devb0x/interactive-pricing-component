@@ -120,6 +120,12 @@
           position: relative;
         }
       }
+
+      .badge-discount {
+        @include breakpoint-up(tablet){
+          padding: 3px 6px;
+        }
+      }
     }
   }
 
@@ -175,6 +181,7 @@
       font-family: $manrope;
       font-size: 12px;
       font-weight: $extraBold;
+      padding: 0;
 
       &:hover {
         color: $white;
@@ -219,6 +226,10 @@
   background-color: $lightGrayishBlueBg;
   -webkit-transition: .2s;
   transition: .2s;
+
+    &:hover {
+      background-color: hsl(174,73,70,1);
+    }
 }
 
 .slider:before {
@@ -281,6 +292,10 @@ input[type=range]::-webkit-slider-thumb {
   background-position: center;
   background-repeat: no-repeat;
   margin: -16px 0; // alignment fix
+
+  &:active {
+    background-color: hsl(174,65,41,1);
+  }
 }
 
 // for firefox
@@ -295,6 +310,10 @@ input[type=range]::-moz-range-thumb {
   background-image: url("./../images/icon-slider.svg");
   background-position: center;
   background-repeat: no-repeat;
+
+  &:active {
+    background-color: hsl(174,65,41,1);
+  }
 }
 
 // Step #3 - Styling the track
@@ -333,3 +352,4 @@ input[type="range"]::-moz-range-progress {
   height: 8px;
   border-radius: 5px;
 }
+
