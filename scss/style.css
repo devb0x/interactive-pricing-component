@@ -41,41 +41,41 @@ body {
   }
 }
 .header-wrapper {
-  width: 326px;
-  height: 146px;
+  width: 20.375rem;
+  height: 9.125rem;
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 57px auto 32px;
+  margin: 3.563rem auto 2rem;
   background-image: url("./../images/pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 @media (min-width: 90em) {
   .header-wrapper {
-    width: 395px;
-    height: 145px;
+    width: 24.688rem;
+    height: 9.063rem;
   }
 }
 .header-wrapper .header-text {
   margin: auto;
 }
 .header-wrapper .header-text__title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 800;
 }
 @media (min-width: 90em) {
   .header-wrapper .header-text__title {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 .header-wrapper .header-text__msg {
-  font-size: 13px;
+  font-size: 0.813rem;
   color: #858fad;
 }
 @media (min-width: 90em) {
   .header-wrapper .header-text__msg {
-    font-size: 15px;
+    font-size: 0.938rem;
   }
 }
 @media (min-width: 90em) {
@@ -85,25 +85,24 @@ body {
 }
 
 .card {
-  height: 478px;
-  width: 327px;
-  margin: 34px auto;
+  height: 29.875rem;
+  width: 20.438rem;
+  margin: 2.125rem auto;
   transform: translateY(-30%);
   color: #858fad;
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 20px 30px -5px rgba(127, 137, 185, 0.152073);
+  border-radius: 0.5rem;
+  box-shadow: 0 1.25rem 31.875rem -0.313rem rgba(127, 137, 185, 0.152073);
 }
 @media (min-width: 48em) {
   .card {
-    width: 540px;
-    height: 397px;
-    margin: -60px auto;
+    width: 33.75rem;
+    height: 24.813rem;
+    margin: -3.75rem auto;
   }
 }
 .card-top {
-  height: 278px;
-  max-height: 278px;
+  height: 17.375rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -111,16 +110,16 @@ body {
 }
 @media (min-width: 48em) {
   .card-top {
-    height: 261px;
-    width: 540px;
+    height: 16.313rem;
+    width: 33.75rem;
   }
 }
 .card-top .number {
-  margin-top: 30px;
+  margin-top: 1.875rem;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 1.71429px;
+  letter-spacing: 0.107rem;
 }
 @media (min-width: 48em) {
   .card-top .number {
@@ -131,17 +130,17 @@ body {
     bottom: 76.07%;
     margin-top: 0;
     text-align: left;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
   }
 }
 .card-top input {
   margin: 0 auto;
-  width: 279px;
-  height: 8px;
+  width: 17.438rem;
+  height: 0.5rem;
 }
 @media (min-width: 48em) {
   .card-top input {
-    width: 444px;
+    width: 27.75rem;
     position: absolute;
     left: 8.89%;
     right: 8.89%;
@@ -150,7 +149,7 @@ body {
   }
 }
 .card-top .price {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 800;
   color: #293356;
 }
@@ -162,65 +161,64 @@ body {
     top: 10.08%;
     bottom: 76.07%;
     text-align: right;
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 .card-top .price > span {
   position: relative;
-  bottom: 5px;
-  font-size: 14px;
+  bottom: 0.313rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #858fad;
 }
 .card-top .billing {
   display: inline-flex;
-  font-size: 12px;
-  margin: 0 auto 38px;
+  font-size: 0.75rem;
+  margin: 0 auto 2.375rem;
 }
 @media (min-width: 48em) {
   .card-top .billing {
-    margin: 0 auto 38px 30%;
+    margin: 0 auto 2.375rem 30%;
   }
 }
 @media (min-width: 48em) {
   .card-top .billing-left, .card-top .billing-right {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 }
 .card-top .billing .badge {
   position: absolute;
-  margin: 0 0 0 4px;
-  padding: 1.5px;
-  font-size: 10px;
+  margin: 0 0 0 0.25rem;
+  padding: 0.094rem;
+  font-size: 0.625rem;
   font-weight: 800;
   color: #ff8c66;
   background-color: #feede7;
-  border-radius: 9.5px;
-  height: 19px;
-  width: 41px;
+  border-radius: 0.594rem;
+  height: 1.188rem;
+  width: 2.563rem;
 }
 @media (min-width: 48em) {
   .card-top .billing .badge {
-    width: 80px;
+    width: 5rem;
     position: relative;
   }
 }
 @media (min-width: 48em) {
   .card-top .billing .badge-discount {
-    padding: 3px 6px;
+    padding: 0.188rem 0.375rem;
   }
 }
 .card-bottom {
-  border-top: 1px solid #eaeefb;
-  height: 200px;
-  max-height: 200px;
+  border-top: 0.063rem solid #eaeefb;
+  height: 12.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 @media (min-width: 48em) {
   .card-bottom {
-    height: 136px;
+    height: 8.5rem;
     flex-direction: inherit;
   }
 }
@@ -228,9 +226,9 @@ body {
   text-align: center;
   list-style: inside url("./../images/icon-check.svg");
   padding: 0;
-  height: 71px;
-  font-size: 12px;
-  line-height: 16px;
+  height: 4.438rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -239,27 +237,27 @@ body {
 @media (min-width: 48em) {
   .card-bottom .perks {
     list-style: outside url("./../images/icon-check.svg");
-    margin: auto auto auto 58px;
+    margin: auto auto auto 3.625rem;
     text-align: left;
   }
 }
 @media (min-width: 48em) {
   .card-bottom .perks-span {
-    margin-left: 9px;
+    margin-left: 0.563rem;
   }
 }
 .card-bottom .btn {
   cursor: pointer;
   outline: none;
   border: none;
-  border-radius: 20.5px;
-  width: 170px;
-  height: 41px;
+  border-radius: 1.281rem;
+  width: 10.625rem;
+  height: 2.563rem;
   background-color: #293356;
   color: #bdccff;
-  margin: 0 auto 32px;
+  margin: 0 auto 2rem;
   font-family: "Manrope", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 800;
   padding: 0;
 }
@@ -268,21 +266,21 @@ body {
 }
 @media (min-width: 48em) {
   .card-bottom .btn {
-    margin: auto 44px auto;
+    margin: auto 2.75rem auto;
   }
 }
 
 .switch {
   position: relative;
   display: inline-block;
-  width: 43px;
-  height: 24px;
-  margin: 0 8px;
-  bottom: 4px;
+  width: 2.688rem;
+  height: 1.5rem;
+  margin: 0 0.5rem;
+  bottom: 0.25rem;
 }
 @media (min-width: 48em) {
   .switch {
-    bottom: -7px;
+    bottom: -0.438rem;
   }
 }
 
@@ -310,23 +308,23 @@ body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 14px;
-  width: 14px;
-  left: 5px;
-  bottom: 5px;
+  height: 0.875rem;
+  width: 0.875rem;
+  left: 0.313rem;
+  bottom: 0.313rem;
   background-color: white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(18px);
-  -ms-transform: translateX(18px);
-  transform: translateX(18px);
+  -webkit-transform: translateX(1.125rem);
+  -ms-transform: translateX(1.125rem);
+  transform: translateX(1.125rem);
 }
 
 .slider.round {
-  border-radius: 22px;
+  border-radius: 1.375rem;
 }
 
 .slider.round:before {
@@ -351,28 +349,28 @@ input[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
-  height: 40px;
-  width: 40px;
+  box-shadow: 0 0.938rem 1.875rem rgba(0, 255, 231, 0.6);
+  height: 2.5rem;
+  width: 2.5rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 1.563rem;
   background-color: #10d5c2;
   cursor: pointer;
   background-image: url("./../images/icon-slider.svg");
   background-position: center;
   background-repeat: no-repeat;
-  margin: -16px 0;
+  margin: -1rem 0;
 }
 input[type=range]::-webkit-slider-thumb:active {
   background-color: #25ad9f;
 }
 
 input[type=range]::-moz-range-thumb {
-  box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
-  height: 40px;
-  width: 40px;
+  box-shadow: 0 0.938rem 1.875rem rgba(0, 255, 231, 0.6);
+  height: 2.5rem;
+  width: 2.5rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 1.563rem;
   background-color: #10d5c2;
   cursor: grabbing;
   background-image: url("./../images/icon-slider.svg");
@@ -384,32 +382,32 @@ input[type=range]::-moz-range-thumb:active {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  width: 279px;
-  height: 8px;
+  width: 17.438rem;
+  height: 0.5rem;
   cursor: pointer;
   background: #a5f3eb;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border: none;
 }
 
 input[type=range]::-moz-range-track {
-  width: 279px;
-  height: 8px;
+  width: 17.438rem;
+  height: 0.5rem;
   cursor: pointer;
   background: #eaeefb;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border: none;
 }
 @media (min-width: 48em) {
   input[type=range]::-moz-range-track {
-    width: 444px;
+    width: 27.75rem;
   }
 }
 
 input[type=range]::-moz-range-progress {
   background-color: #a5f3eb;
-  height: 8px;
-  border-radius: 5px;
+  height: 0.5rem;
+  border-radius: 0.313rem;
 }
 
 /*# sourceMappingURL=style.css.map */

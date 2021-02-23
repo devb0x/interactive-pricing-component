@@ -15,40 +15,40 @@
   }
 
   &-wrapper {
-    width: 326px;
-    height: 146px;
+    width: 20.375rem;
+    height: 9.125rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 57px auto 32px;
+    margin: 3.563rem auto 2rem;
 
     background-image: url("./../images/pattern-circles.svg");
     background-repeat: no-repeat;
     background-position: center;
 
     @include breakpoint-up(desktop){
-      width: 395px;
-      height: 145px;
+      width: 24.688rem;
+      height: 9.063rem;
     }
 
     .header-text {
       margin: auto;
 
       &__title {
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: $extraBold;
 
         @include breakpoint-up(desktop){
-          font-size: 28px;
+          font-size: 1.75rem;
         }
       }
 
       &__msg {
-        font-size: 13px;
+        font-size: 0.813rem;
         color: $grayishBlue;
 
         @include breakpoint-up(desktop){
-          font-size: 15px;
+          font-size: 0.938rem;
         }
 
         > br {
